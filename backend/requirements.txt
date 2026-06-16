@@ -1,0 +1,42 @@
+# ─── Daruka Interview Bot — Backend Requirements ───────────────────────────
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# Database
+sqlalchemy[asyncio]==2.0.31
+aiomysql==0.2.0
+alembic==1.13.2
+
+# Validation / Settings
+pydantic==2.8.0
+pydantic-settings==2.3.4
+
+# Auth & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+# Cache / Queue
+redis==5.0.7
+
+# HTTP client
+httpx==0.27.0
+
+# AI / Voice
+pymupdf==1.24.7
+openai-whisper==20231117
+piper-tts==1.2.0
+ultralytics==8.2.60
+
+# Reporting
+reportlab==4.2.2
+
+# Email
+aiosmtplib==3.0.1
+
+# WebSockets
+websockets==12.0
+
+# Utilities
+python-dotenv==1.0.1

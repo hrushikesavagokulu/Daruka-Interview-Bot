@@ -1,0 +1,59 @@
+/* Daruka Interview Bot — Global Styles (Phase 0) */
+
+/* Google Fonts — Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color tokens from README Section 1.4 */
+  --color-primary:    #1A3A5C;
+  --color-accent:     #2980B9;
+  --color-light:      #D6EAF8;
+  --color-mid:        #85C1E9;
+  --color-white:      #FFFFFF;
+  --color-black:      #000000;
+  --color-gray:       #555555;
+  --color-light-gray: #F2F3F4;
+  --color-border:     #AED6F1;
+  --color-success:    #1E8449;
+  --color-warning:    #D35400;
+  --color-danger:     #C0392B;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-gray);
+  background-color: var(--color-light-gray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
