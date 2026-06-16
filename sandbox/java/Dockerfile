@@ -3,7 +3,7 @@
 # Run with: --network none --memory 256m --cpus 0.5
 #           --ulimit nproc=50 --read-only --tmpfs /tmp:size=50m
 # ─────────────────────────────────────────────
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 # Create non-root sandbox user (UID 1001)
 RUN useradd -m -u 1001 sandbox

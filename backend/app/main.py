@@ -51,6 +51,13 @@ app.add_middleware(
 from app.api.auth import router as auth_router
 app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])
 
+# ── Profile & Resume Routers ──────────────────────────────────────────────────
+from app.api.profile import router as profile_router
+from app.api.resume import router as resume_router
+app.include_router(profile_router, prefix="/api/v1/profile", tags=["Profile"])
+app.include_router(resume_router, prefix="/api/v1/resume", tags=["Resume"])
+
+
 
 # ── Health probe ──────────────────────────────────────────────────────────────
 @app.get("/health", tags=["Health"])
