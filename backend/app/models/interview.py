@@ -48,6 +48,13 @@ class InterviewSession(Base):
     report: Mapped["Report"] = relationship(  # type: ignore[name-defined]
         "Report", back_populates="session", uselist=False, cascade="all, delete-orphan"
     )
+    questions: Mapped[list["Question"]] = relationship(  # type: ignore[name-defined]
+        "Question", back_populates="session", cascade="all, delete-orphan",
+        order_by="Question.index"
+    )
+    answers: Mapped[list["Answer"]] = relationship(  # type: ignore[name-defined]
+        "Answer", back_populates="session", cascade="all, delete-orphan"
+    )
 
     def __repr__(self) -> str:
         return (

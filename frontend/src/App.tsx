@@ -14,11 +14,12 @@ import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import Results from './pages/Results'
 import ResultDetail from './pages/ResultDetail'
-import InterviewSetup from './pages/InterviewSetup'
-import SystemCheck from './pages/SystemCheck'
+import InterviewSetup from './pages/Interview/Setup'
+import SystemCheck from './pages/Interview/SystemCheck'
 import ActiveInterview from './pages/ActiveInterview'
 import FeedbackWaiting from './pages/FeedbackWaiting'
 import Admin from './pages/Admin'
+import MonacoWrapper from './components/CodeEditor/MonacoWrapper'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dev/editor-test" element={<MonacoWrapper />} />
 
           {/* ── Full-screen Routes (no sidebar/navbar) ─────────────────────── */}
           <Route

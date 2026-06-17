@@ -18,6 +18,7 @@ class Settings(BaseSettings):
 
     # Ollama
     OLLAMA_URL: str = "http://ollama:11434"
+    OLLAMA_MODEL: str = "qwen3:8b"
 
     # SMTP
     SMTP_HOST: str = "smtp.gmail.com"

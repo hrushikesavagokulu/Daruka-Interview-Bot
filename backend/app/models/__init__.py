@@ -8,6 +8,8 @@ from app.models.user import User, CandidateProfile       # noqa: F401
 from app.models.resume import Resume                      # noqa: F401
 from app.models.interview import InterviewSession         # noqa: F401
 from app.models.report import Report                      # noqa: F401
+from app.models.question import Question                  # noqa: F401
+from app.models.answer import Answer                      # noqa: F401
 
 __all__ = [
     "User",
@@ -15,4 +17,6 @@ __all__ = [
     "Resume",
     "InterviewSession",
     "Report",
+    "Question",
+    "Answer",
 ]

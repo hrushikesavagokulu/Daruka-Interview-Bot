@@ -24,7 +24,7 @@ services:
       - '8000:8000'
     volumes:
       - ./backend:/app
-      - /var/run/docker.sock:/var/run/docker.sock   # sandbox control
+      - /var/run/docker.sock:/var/run/docker.sock # sandbox control
     environment:
       DATABASE_URL: mysql+aiomysql://root:daruka@mysql_db:3306/daruka
       REDIS_URL: redis://redis:6379/0
@@ -48,7 +48,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pdaruka"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pdaruka" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -69,7 +69,7 @@ services:
       - ollama_data:/root/.ollama
     restart: unless-stopped
     # After first start, pull the model:
-    # docker exec ollama ollama pull llama3.1:8b
+    # docker exec ollama ollama pull qwen3:8b
 
 volumes:
   mysql_data:

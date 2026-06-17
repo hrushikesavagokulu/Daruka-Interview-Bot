@@ -415,7 +415,7 @@ services:
     ports: ['11434:11434']
     volumes:
       - ollama_data:/root/.ollama
-    # After first start: docker exec ollama ollama pull llama3.1:8b
+    # After first start: docker exec ollama ollama pull qwen3:8b
  
 volumes:
   mysql_data:

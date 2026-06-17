@@ -51,16 +51,24 @@ app.add_middleware(
 from app.api.auth import router as auth_router
 app.include_router(auth_router, prefix="/api/v1/auth", tags=["Auth"])
 
-# ── Profile & Resume Routers ──────────────────────────────────────────────────
+# ── Profile, Resume, Coding & Interview Routers ────────────────────────────────
 from app.api.profile import router as profile_router
 from app.api.resume import router as resume_router
+from app.api.coding import router as coding_router
+from app.api.interview import router as interview_router
+from app.api.websocket import router as ws_router
 app.include_router(profile_router, prefix="/api/v1/profile", tags=["Profile"])
 app.include_router(resume_router, prefix="/api/v1/resume", tags=["Resume"])
+app.include_router(coding_router, prefix="/api/v1/coding", tags=["Coding Sandbox"])
+app.include_router(interview_router, prefix="/api/v1/interview", tags=["Interview"])
+app.include_router(ws_router, prefix="/ws", tags=["WebSocket Interview"])
+
 
 
 
 # ── Health probe ──────────────────────────────────────────────────────────────
 @app.get("/health", tags=["Health"])
+@app.get("/api/v1/health", tags=["Health"])
 async def health_check():
     """Liveness probe — returns 200 when server + DB are reachable."""
     from app.db.database import get_engine
